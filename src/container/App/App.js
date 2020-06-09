@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todos from '../../components/Todos';
+import AddTodo from '../../components/AddTodo';
 
 class App extends Component {
   state = {
@@ -13,7 +14,16 @@ class App extends Component {
     const filterTodos = this.state.todos.filter(todo => {
       return todo.id !== id
     });
-    this.setState({ todos: filterTodos})
+    this.setState({
+      todos: filterTodos
+    })
+  }
+  addTodo = (todo) => {
+    todo.id = Math.random()
+    let addedTodos = [...this.state.todos, todo]
+    this.setState({
+      todos: addedTodos
+    })
   }
   render() {
     return (
@@ -21,6 +31,7 @@ class App extends Component {
         <h1 className="center blue-text">The Todo's List</h1>
         <h5 className="center red-text">Click on a todo to remove it from the list!</h5>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        <AddTodo addTodo={this.addTodo}/>
       </div>
     );
   }

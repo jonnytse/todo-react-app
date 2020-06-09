@@ -4,7 +4,7 @@
 // //see lines 33-58 for the shortened version, and compare with lines 6-7
 // import React from 'react';
 
-// const Todos = (props) => {             
+// const Todos = (props) => {       //in this line, how do I add more props, like deleteTodo() from App.js component? 
 //     const {todos} = props;               
 //     const todoList = todos.length ? (
 //         todos.map(todo => {
@@ -34,7 +34,7 @@
 import React from 'react';
 
 const Todos = ({todos, deleteTodo}) => {     
-            
+
     const todoList = todos.length ? (
         todos.map(todo => {
             return (
@@ -64,7 +64,7 @@ export default Todos;
 
 // class Todos extends Component {
 //     render() {
-//         const {todos} = this.props;
+//         const {todos} = this.props;   // //in this line, how do I add more props, like deleteTodo() from App.js component? 
 //         const todoList = todos.length ? (
 //             todos.map(todo => {
 //             return (
