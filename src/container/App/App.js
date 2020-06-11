@@ -7,7 +7,7 @@ class App extends Component {
     todos: [
       {id: 1, content: 'Practice coding'},
       {id: 2, content: 'Mow the lawn'},
-      {id: 3, content: 'Tidy up the house'}
+      {id: 3, content: 'Walk the dog'}
     ]
   }
   deleteTodo = (id) => {
@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="todo-app container">
-        <h1 className="center blue-text">The Todo's List</h1>
+        <h1 className="center blue-text">Jonathan's Todo's List</h1>
         <h5 className="center red-text">Click on a todo to remove it from the list!</h5>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddTodo addTodo={this.addTodo}/>
